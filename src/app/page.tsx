@@ -12,17 +12,14 @@ export default function Home() {
   const [data, setData] = useState<item[]>([]);
   const handleNews = async () => {
     setLoding(false);
-    const data = await getNews();
-    console.log(data);
-    
+    const data = await getNews();    
     setData(data);
     setLoding(true);
   };
 
   useEffect(() => {
     handleNews();
-    console.log(data);
-  }, []);
+  },[]);
   
   return (
     <main className={styles.main}>

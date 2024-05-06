@@ -44,16 +44,16 @@ export default function ItemCard({items} : Props) {
   return (
     <>
       {items &&
-        items.map((item) => {
+        items.map((item, id) => {
           return (
-            <Card sx={{ maxWidth: 345 }}>
+            <Card key={id+1} sx={{ maxWidth: 345 }}>
               <CardHeader
                 avatar={
                   <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
                     R
                   </Avatar>
                 }
-                action={
+                action={  
                   <IconButton aria-label="settings">
                     <MoreVertIcon />
                   </IconButton>
